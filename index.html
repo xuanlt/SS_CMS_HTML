@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- BEGIN Includes Styles  -->
+    <link rel="stylesheet" href="css/fa.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- END Include Styles  -->
+    <title>SS - Dashboard</title>
+</head>
+
+<body>
+    <!-- BEGIN Site -->
+    <div class="site">
+        <!-- BEGIN Site Sidebar -->
+        <div class="site-sidebar">
+            <div class="sidebar-header p-2">
+                <!-- BEGIN Site Brand -->
+                <div class="site-brand">
+                    <h1 class="site-title mb-0">
+                        <a href="index.html" class="site-link"><img src="img/logo-full.svg" class="site-logo full" alt=""><img src="img/logo-icon.svg" class="site-logo icon" alt=""></a>
+                    </h1>
+                </div>
+                <!-- END Site Brand -->
+                <button class="btn btn-white btn-sidebar-toggle bg-transparent"><i class="fa-solid fa-bars"></i></button>
+            </div>
+            <div class="sidebar-content p-2">
+                <!-- BEGIN Sidebar Menu -->
+                <ul id="sidebar-nav" class="nav sidebar-nav flex-column">
+                    <li class="nav-item item-dashboard">
+                        <a href="#" class="nav-link active"><span class="icon"><i class="fa-regular fa-house-blank"></i></span><span class="text">Tổng quan</span></a>
+                    </li>
+                    <li class="nav-item item-space">&nbsp;</li>
+                    <li class="nav-item item-title">Người dùng</li>
+                    <li class="nav-item item-customer">
+                        <a href="#customerMenu" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="customerMenu"><span class="icon"><i class="fa-sharp fa-solid fa-users"></i></span><span class="text">Khách hàng</span></a>
+                        <ul id="customerMenu" class="nav nav-sub-menu flex-column collapse" data-bs-parent="#sidebar-nav">
+                            <li class="nav-item item-customer-new">
+                                <a href="#" class="nav-link">Thêm khách hàng</a>
+                            </li>
+                            <li class="nav-item item-customer-list">
+                                <a href="#" class="nav-link">Danh sách Khách hàng</a>
+                            </li>
+                            <li class="nav-item item-customer-category">
+                                <a href="#" class="nav-link">Nhóm khách hàng</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item item-employee">
+                        <a href="#employeeMenu" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="employeeMenu"><span class="icon"><i class="fa-sharp fa-solid fa-user-group"></i></span><span class="text">Nhân viên</span></a>
+                        <ul id="employeeMenu" class="nav nav-sub-menu flex-column collapse" data-bs-parent="#sidebar-nav">
+                            <li class="nav-item item-employee-new">
+                                <a href="#" class="nav-link">Thêm mới nhân viên</a>
+                            </li>
+                            <li class="nav-item item-employee-list">
+                                <a href="#" class="nav-link">Danh sách nhân viên</a>
+                            </li>
+                            <li class="nav-item item-employee-category">
+                                <a href="#" class="nav-link">Nhóm nhân viên</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item item-user-privileges">
+                        <a href="#userprivilegesMenu" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="userprivilegesMenu"><span class="icon"><i class="fa-sharp fa-solid fa-screen-users"></i></span><span class="text">Quản lý phân quyền</span></a>
+                        <ul id="userprivilegesMenu" class="nav nav-sub-menu flex-column collapse" data-bs-parent="#sidebar-nav">
+                            <li class="nav-item item-privileges-group">
+                                <a href="#" class="nav-link">Nhóm các quyền</a>
+                            </li>
+                            <li class="nav-item item-privileges-user">
+                                <a href="#" class="nav-link">Quyền cho người dùng</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item item-space">&nbsp;</li>
+                    <li class="nav-item item-title">Dịch vụ</li>
+                    <li class="nav-item item-service">
+                        <a href="#serviceMenu" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="serviceMenu"><span class="icon"><i class="fa-solid fa-box"></i></span><span class="text">Gói dịch vụ</span></a>
+                        <ul id="serviceMenu" class="nav nav-sub-menu flex-column collapse" data-bs-parent="#sidebar-nav">
+                            <li class="nav-item item-service-new">
+                                <a href="#" class="nav-link">Tạo mới gói dịch vụ</a>
+                            </li>
+                            <li class="nav-item item-service-list">
+                                <a href="#" class="nav-link">Danh sách nhóm</a>
+                            </li>
+                            <li class="nav-item item-service-category">
+                                <a href="#" class="nav-link">Nhóm dịch vụ</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item item-contract">
+                        <a href="#contractMenu" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="contractMenu"><span class="icon"><i class="fa-solid fa-address-card"></i></span><span class="text">Quản lý hợp đồng</span></a>
+                        <ul id="contractMenu" class="nav nav-sub-menu flex-column collapse" data-bs-parent="#sidebar-nav">
+                            <li class="nav-item item-service-new">
+                                <a href="#" class="nav-link">Thêm mới hợp đồng</a>
+                            </li>
+                            <li class="nav-item item-service-list">
+                                <a href="#" class="nav-link">Danh sách hợp đồng</a>
+                            </li>
+                            <li class="nav-item item-service-category">
+                                <a href="#" class="nav-link">Nhóm hợp đồng</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item item-wellyPoint">
+                        <a href="#loyaltyMenu" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="loyaltyMenu"><span class="icon"><i class="fa-solid fa-hundred-points"></i></span><span class="text">Quản lý điểm thưởng</span></a>
+                        <ul id="loyaltyMenu" class="nav nav-sub-menu flex-column collapse" data-bs-parent="#sidebar-nav">
+                            <li class="nav-item item-loyalty-list">
+                                <a href="#" class="nav-link">Danh sách khách hàng</a>
+                            </li>
+                            <li class="nav-item item-service-category">
+                                <a href="#" class="nav-link">Cấu hình Welly Points</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item item-class">
+                        <a href="#classMenu" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="classMenu"><span class="icon"><i class="fa-solid fa-dumbbell"></i></span><span class="text">Quản lý lớp học</span></a>
+                        <ul id="classMenu" class="nav nav-sub-menu flex-column collapse" data-bs-parent="#sidebar-nav">
+                            <li class="nav-item item-class-new">
+                                <a href="#" class="nav-link">Thêm mới lớp học</a>
+                            </li>
+                            <li class="nav-item item-class-list">
+                                <a href="#" class="nav-link">Danh sách lớp học</a>
+                            </li>
+                            <li class="nav-item item-class-category">
+                                <a href="#" class="nav-link">Nhóm lớp học</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item item-space">&nbsp;</li>
+                    <li class="nav-item item-title">Khác</li>
+                    <li class="nav-item item-class">
+                        <a href="#reportMenu" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="reportMenu"><span class="icon"><i class="fa-solid fa-chart-simple"></i></span><span class="text">Báo cáo</span></a>
+                        <ul id="reportMenu" class="nav nav-sub-menu flex-column collapse" data-bs-parent="#sidebar-nav">
+                            <li class="nav-item item-report-finance">
+                                <a href="#" class="nav-link">Báo cáo tài chính</a>
+                            </li>
+                            <li class="nav-item item-report-funds">
+                                <a href="#" class="nav-link">Sô quỹ</a>
+                            </li>
+                            <li class="nav-item item-report-calendar">
+                                <a href="#" class="nav-link">Nhắc lịch</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item item-class">
+                        <a href="#kpiMenu" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="kpiMenu"><span class="icon"><i class="fa-sharp fa-solid fa-flag-swallowtail"></i></span><span class="text">KPI</span></a>
+                        <ul id="kpiMenu" class="nav nav-sub-menu flex-column collapse" data-bs-parent="#sidebar-nav">
+                            <li class="nav-item item-kpi-new">
+                                <a href="#" class="nav-link">Thêm mới</a>
+                            </li>
+                            <li class="nav-item item-kpi-list">
+                                <a href="#" class="nav-link">Danh sách KPI</a>
+                            </li>
+                            <li class="nav-item item-kpi-report">
+                                <a href="#" class="nav-link">Báo cáo</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- END Site Sidebar -->
+        <!-- BEGIN Site Header -->
+        <div class="site-header fixed-top">
+            <div class="container-fluid">
+                <div class="header-inner d-flex justify-content-between align-items-center px-2">
+                    <!-- BEGIN Header Nav Start -->
+                    <ul class="nav header-nav-main align-items-center header-nav-start">
+                        <li class="nav-item item-sidebar-toggle me-3">
+                            <a href="#" class="nav-link px-1"><i class="fa-solid fa-bars"></i></a>
+                        </li>
+                        <li class="nav-item item-search d-none d-lg-inline-flex">
+                            <div class="input-group input-group-fake-input input-group-search rounded-circle">
+                                <span class="input-group-text border-end-0 pe-0 ps-3"><i class="fa-solid fa-search opacity-50"></i></span>
+                                <input type="text" class="form-control border-start-0" value="" placeholder="Tìm kiếm">
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- END Header Nav Start -->
+                    <!-- BEGIN Header Nav End -->
+                    <ul class="nav header-nav-main align-items-center header-nav-end">
+                        <li class="nav-item item-notification dropdown no-arrow has-new-notication">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"><span class="icon text-secondary"><i class="fa-solid fa-bell"></i></span></a>
+                            <div class="dropdown-menu pt-0">
+                                <!-- BEGIN Notifiation Header -->
+                                <div class="py-2 px-3 border-bottom d-flex justify-content-between align-items-center border-radius-top bg-light">
+                                    <h6 class="text-primary text-uppercase mb-0"><strong>Thông báo</strong></h6>
+                                    <a href="#" class="small">Đánh dấu đã đọc</a>
+                                </div>
+                                <!-- END Notifiation Header -->
+                                <div class="py-1 px-3 border-bottom"><span class="opacity-50">Hôm nay</span></div>
+                                <!-- BEGIN List Notifiation -->
+                                <div class="list-notificaitons list-group list-group-flush">
+                                    <!-- BEGIN Item -->
+                                    <a href="#" class="list-group-item list-group-item-action unread">
+                                        <div class="d-flex">
+                                            <div class="flex-shrink-1 me-3">
+                                                <img src="holder.js/40x40?random=yes" class="mt-1" alt="">
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <p class="mb-1">Ut vel nibh sit amet dolor hendrerit vestibulum.</p>
+                                                <span class="small opacity-50">1 giớ trước</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <!-- END Item -->
+                                    <!-- BEGIN Item -->
+                                    <a href="#" class="list-group-item list-group-item-action unread">
+                                        <div class="d-flex">
+                                            <div class="flex-shrink-1 me-3">
+                                                <img src="holder.js/40x40?random=yes" class="mt-1" alt="">
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <p class="mb-1">Ut vel nibh sit amet dolor hendrerit vestibulum.</p>
+                                                <span class="small opacity-50">1 giớ trước</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <!-- END Item -->
+                                    <!-- BEGIN Item -->
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex">
+                                            <div class="flex-shrink-1 me-3">
+                                                <img src="holder.js/40x40?random=yes" class="mt-1" alt="">
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <p class="mb-1">Ut vel nibh sit amet dolor hendrerit vestibulum.</p>
+                                                <span class="small opacity-50">1 giớ trước</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <!-- END Item -->
+                                </div>
+                                <!-- END List Notifiation -->
+                                <div class="pt-1 px-3 text-center border-top">
+                                    <a href="#" class="small">Xem tất cả</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item item-user dropdown no-arrow ms-2">
+                            <a href="#" class="nav-link dropdown-toggle px-0" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"><img src="holder.js/32x32?random=yes&text=\n" class="rounded-circle" alt=""></a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li class="py-2 px-3">
+                                    <p class="text-center mb-1">
+                                        <a href="#"><img src="holder.js/64x64?random=yes&text=\n" class="rounded-circle" alt=""></a>
+                                    </p>
+                                    <p class="text-center mb-1"><strong>Mercedes Gilmore</strong></p>
+                                </li>
+                                <li><a class="dropdown-item" href="#"><span class="icon me-2"><i class="fa-solid fa-circle-user"></i></span>Tài khoản của tôi</a></li>
+                                <li><a class="dropdown-item" href="#"><span class="icon me-2"><i class="fa-solid fa-box"></i></span>Thông tin gói dịch vụ</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- END Header Nav End -->
+                </div>
+            </div>
+        </div>
+        <!-- END Site Header -->
+        <!-- BEGIN Site Main -->
+        <div class="site-main px-2">
+            <div class="container-fluid py-3">
+                <!-- BEGIN -->
+                <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-1">
+                        <li class="breadcrumb-item"><a href="#">Bảng tin</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Library</li>
+                    </ol>
+                </nav>
+                <!-- END-->
+                <h3 class="mb-3">Bảng tin hệ thống</h3>
+                <div class="row g-3 align-items-stretch">
+                    <div class="col-xl-3">
+                        <!-- BEGIN Card -->
+                        <div class="card">
+                            <div class="card-header d-flex align-items-center justify-content-between bg-transparent border-bottom-0">
+                                <h6 class="card-title text-uppercase mb-0">
+                                    <strong>Tiêu đề</strong>
+                                </h6>
+                                <div class="btn-group no-arrow">
+                                    <button class="btn btn-sm border-0 dropdown-toggle px-1" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"><i class="fa-solid fa-ellipsis"></i></button>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                ---Content
+                            </div>
+                        </div>
+                        <!-- END Card -->
+                    </div>
+                    <div class="col-xl-3">
+                        <!-- BEGIN Card -->
+                        <div class="card">
+                            <div class="card-header d-flex align-items-center justify-content-between bg-transparent border-bottom-0">
+                                <h6 class="card-title text-uppercase mb-0">
+                                    <strong>Tiêu đề</strong>
+                                </h6>
+                                <div class="btn-group no-arrow">
+                                    <button class="btn btn-sm border-0 dropdown-toggle px-1" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"><i class="fa-solid fa-ellipsis"></i></button>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                ---Content
+                            </div>
+                        </div>
+                        <!-- END Card -->
+                    </div>
+                    <div class="col-xl-6">
+                        <!-- BEGIN Card -->
+                        <div class="card">
+                            <div class="card-header d-flex align-items-center justify-content-between bg-transparent border-bottom-0">
+                                <h6 class="card-title text-uppercase mb-0">
+                                    <strong>Tiêu đề</strong>
+                                </h6>
+                                <div class="btn-group no-arrow">
+                                    <button class="btn btn-sm border-0 dropdown-toggle px-1" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"><i class="fa-solid fa-ellipsis"></i></button>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                ---Content
+                            </div>
+                        </div>
+                        <!-- END Card -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END Site Main -->
+    </div>
+    <!-- END Site -->
+    <!-- BEGIN Inlucde JS  -->
+    <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/holderjs/holder.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- END Inlucde JS -->
+    <!-- BEGIN JS Only for this page  -->
+    <script>
+        jQuery(document).ready(function($) {
+
+        });
+    </script>
+    <!-- END JS Only for this page  -->
+</body>
+
+</html>

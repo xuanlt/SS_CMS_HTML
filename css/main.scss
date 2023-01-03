@@ -1,0 +1,495 @@
+/*--- IMPORT BOOTSTRAP ---*/
+
+// scss-docs-start gray-color-variables
+$white: #fff !default;
+$black: #000 !default;
+// scss-docs-end gray-color-variables
+// scss-docs-start color-variables
+$blue: #000774 !default;
+$indigo: #848AFF !default;
+$purple: #B1B4FF !default;
+$pink: #d63384 !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #198754 !default;
+$teal: #20c997 !default;
+$cyan: #0dcaf0 !default;
+// scss-docs-end color-variables
+// $font-size-base affects the font size of the body text
+$font-size-base: 0.875rem !default;
+// Settings for the `<body>` element.
+$body-bg: #eee !default;
+// scss-docs-start dropdown-variables
+$dropdown-min-width: 10rem !default;
+// scss-docs-end dropdown-variables
+// scss-docs-start input-group-variables
+$input-group-addon-bg: $white !default;
+// scss-docs-end input-group-variables
+// scss-docs-start form-input-variables
+$input-bg: $white !default;
+$input-focus-box-shadow: none !default;
+// scss-docs-end form-input-variables
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+/* inter-regular - vietnamese_latin */
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../webfonts/inter-v12-vietnamese_latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local(''), url('../webfonts/inter-v12-vietnamese_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../webfonts/inter-v12-vietnamese_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../webfonts/inter-v12-vietnamese_latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('../webfonts/inter-v12-vietnamese_latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../webfonts/inter-v12-vietnamese_latin-regular.svg#Inter') format('svg');
+    /* Legacy iOS */
+}
+
+
+/* inter-700 - vietnamese_latin */
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../webfonts/inter-v12-vietnamese_latin-700.eot');
+    /* IE9 Compat Modes */
+    src: local(''), url('../webfonts/inter-v12-vietnamese_latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../webfonts/inter-v12-vietnamese_latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../webfonts/inter-v12-vietnamese_latin-700.woff') format('woff'), /* Modern Browsers */
+    url('../webfonts/inter-v12-vietnamese_latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../webfonts/inter-v12-vietnamese_latin-700.svg#Inter') format('svg');
+    /* Legacy iOS */
+}
+
+
+/* -------------------
+ GLOBAL
+ --------------------*/
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Inter', sans-serif;
+}
+
+strong {
+    font-weight: 600;
+}
+
+.no-arrow {
+    >.dropdown-toggle {
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.border-radius-top {
+    border-top-right-radius: 0.25rem;
+    border-top-left-radius: 0.25rem;
+}
+
+.border-radius-bottom {
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+.list-notificaitons {
+    width: 20rem;
+    max-width: 100%;
+    .list-group-item-action {
+        &.unread {
+            background-color: #FFFBF0;
+            p {
+                font-weight: bold;
+            }
+            &:hover {
+                background-color: #FFF7E0;
+            }
+        }
+    }
+}
+
+.dropdown-menu {
+    transform: translate(0px, 100px);
+    opacity: 0.5;
+    transition: all ease 0.3s;
+    &.show {
+        opacity: 1;
+    }
+    .dropdown-item {
+        .icon {
+            width: 1rem;
+            display: inline-block;
+            text-align: center;
+            opacity: 0.5;
+        }
+    }
+}
+
+.input-group {
+    &.rounded-circle {
+        *:first-child {
+            border-top-left-radius: 2rem;
+            border-bottom-left-radius: 2rem;
+        }
+        *:last-child {
+            border-top-right-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+        }
+    }
+    &.input-group-fake-input {
+        .form-control,
+        .form-control:focus {
+            transition: none;
+        }
+        &:focus-within {
+            .form-control,
+            .input-group-text {
+                border-color: #000330 !important;
+                transition: none;
+            }
+        }
+    }
+    &.input-group-search {
+        .form-control {
+            width: 8rem;
+            transition: width ease 0.2s;
+            &:focus {
+                width: 15rem;
+                transition: width ease 0.2s;
+            }
+        }
+    }
+}
+
+.bg-warning-light {
+    background-color: #FFFBF0;
+}
+
+.bg-success-light {
+    background-color: #E4FBF1;
+}
+
+.bg-danger-light {
+    background-color: #FFEDED;
+}
+
+.bg-primary-light {
+    background-color: #EBF5FF;
+}
+
+
+/*--- LAYOUT ---*/
+
+.site {
+    position: relative;
+    padding-left: 16rem;
+    padding-top: 3.5rem;
+    min-width: 20rem;
+}
+
+@media screen and (max-width:540px) {
+    .site {
+        padding-left: 3.5rem !important;
+    }
+    .site-sidebar {
+        position: fixed !important;
+    }
+    .site-header {
+        padding-left: 3.5rem !important;
+    }
+}
+
+
+/* Sitebar collapsed */
+
+.sidebar-collapsed {
+    .site-sidebar {
+        width: 3.5rem;
+        overflow: visible;
+        .site-brand {
+            padding-right: 0 !important;
+            .site-logo {
+                &.full {
+                    display: none !important;
+                }
+                &.icon {
+                    display: block !important;
+                }
+            }
+        }
+        .btn-sidebar-toggle {
+            visibility: hidden;
+            z-index: -1;
+        }
+        .sidebar-nav {
+            >.nav-item {
+                width: 100%;
+                position: relative;
+                margin-bottom: 0.125rem;
+                &.item-title {
+                    display: none;
+                }
+                >.nav-link {
+                    display: block;
+                    padding: 0.5rem 0;
+                    text-align: center;
+                    .icon {
+                        position: relative;
+                        left: 0;
+                        top: 0;
+                        display: inline-block;
+                    }
+                    .text {
+                        display: none;
+                    }
+                    &[data-bs-toggle="collapse"] {
+                        &:before {
+                            display: none;
+                        }
+                    }
+                    &[aria-expanded="true"] {
+                        background-color: rgba(255, 255, 255, 0.2);
+                    }
+                }
+                //Sub Menu 
+                .nav-sub-menu {
+                    position: absolute;
+                    left: 100%;
+                    width: 12.5rem;
+                    top: 0;
+                    background-color: #000330;
+                    border-left: 1px solid rgba(255, 255, 255, 0.2);
+                    padding: 0.25rem;
+                    margin-bottom: 0;
+                    margin-left: 0.5rem;
+                    .nav-item {
+                        .nav-link {
+                            padding: 0.35rem 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .site {
+        padding-left: 3.5rem;
+        padding-top: 3.5rem;
+    }
+    .site-header {
+        padding-left: 3.5rem;
+    }
+}
+
+
+/*-- Site Sidebar --*/
+
+.site-sidebar {
+    width: 16rem;
+    max-width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 3.5rem;
+    z-index: 888;
+    background-color: #000330 !important;
+    color: rgba(255, 255, 255, 0.75);
+    .sidebar-header {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 3.5rem;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        .site-brand {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding-right: 2.5rem;
+            .site-title {
+                margin-bottom: 0;
+                font-size: 2rem;
+                line-height: 1;
+                .site-link {
+                    display: block;
+                    .site-logo {
+                        max-height: 2.5rem;
+                        max-width: 100%;
+                        &.icon {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .btn-sidebar-toggle {
+            position: absolute;
+            right: 0.5rem;
+            top: 50%;
+            margin-top: -1rem;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            width: 2rem;
+            height: 2rem;
+            color: #fff;
+            border: 0;
+            visibility: hidden;
+        }
+        @media screen and (max-width:540px) {
+            .btn-sidebar-toggle {
+                visibility: visible;
+            }
+        }
+    }
+    .sidebar-nav {
+        .nav-item {
+            .nav-link {
+                color: rgba(255, 255, 255, 0.75);
+                border-radius: 0.25rem;
+                padding: 0.5rem 1rem 0.5rem 2.5rem;
+                line-height: 1.5rem;
+                position: relative;
+                .icon {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    left: 0.5rem;
+                    top: 0.5rem;
+                    color: #B1B4FF;
+                    background: #EFF0FF;
+                    background: linear-gradient(to bottom right, #EFF0FF 0%, #B1B4FF 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+                &:hover {
+                    color: rgba(255, 255, 255, 1);
+                    background-color: rgba(255, 255, 255, 0.2);
+                }
+                &[data-bs-toggle="collapse"] {
+                    &:before {
+                        content: '\f054';
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        font-family: "Font Awesome 6 Pro";
+                        position: absolute;
+                        right: 0.25rem;
+                        top: 0.5rem;
+                        opacity: 0.5;
+                        transition: all ease 0.2s;
+                    }
+                    &[aria-expanded="true"]:before {
+                        transform: rotate(90deg);
+                        transition: all ease 0.2s;
+                        opacity: 1;
+                    }
+                    &[aria-expanded="true"] {
+                        color: rgba(255, 255, 255, 2);
+                    }
+                }
+                &.active {
+                    color: #fff;
+                    background-color: rgba(255, 255, 255, 0.3);
+                }
+            }
+            &.item-title {
+                padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+                opacity: 0.5;
+                font-size: 0.675rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            &.item-space {
+                height: 0;
+                line-height: 0;
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+                margin: 0.5rem 0;
+            }
+            .nav-sub-menu {
+                width: 100%;
+                transition: none;
+                margin-bottom: 0.5rem;
+                .nav-item {
+                    width: 100%;
+                    .nav-link {
+                        padding-top: 0.35rem;
+                        padding-bottom: 0.35rem;
+                        font-size: 0.75rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*-- Site Header --*/
+
+.site-header {
+    padding-left: 16rem;
+    z-index: 777;
+    background-color: #fff;
+    .header-inner {
+        height: 3.5rem;
+        .header-nav-main {
+            .nav-item {
+                &.item-notification {
+                    .nav-link {
+                        position: relative;
+                        .icon {
+                            font-size: 1.25rem;
+                        }
+                    }
+                    &.has-new-notication {
+                        .nav-link {
+                            position: relative;
+                            &:before {
+                                content: '';
+                                width: 0.35rem;
+                                height: 0.35rem;
+                                background-color: #dc3545;
+                                border-radius: 50%;
+                                position: absolute;
+                                right: 0.75rem;
+                                top: 50%;
+                                margin-top: -0.35rem;
+                                z-index: 20;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*-- Site Main --*/
+
+.site-main {}
+
+
+/*-- Site Footer --*/
+
+.site-footer {}
