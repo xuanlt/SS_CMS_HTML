@@ -13072,10 +13072,6 @@ strong {
   font-size: 1rem;
 }
 
-.site-sidebar .tree .treeview li.active > a {
-  color: white;
-}
-
 .site-sidebar .tree .treeview .treeview-menu {
   margin: 0;
   padding: 0;
@@ -13098,10 +13094,29 @@ strong {
 .site-sidebar .tree .treeview.menu-opened a .pull-right-container .pull-right {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
+  opacity: 1;
 }
 
 .site-sidebar .tree .treeview.menu-opened > a {
   color: white;
+}
+
+.site-sidebar .tree .treeview.menu-opened .treeview-menu {
+  display: block !important;
+}
+
+.site-sidebar .tree li.active > a {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.site-sidebar .tree li.active > a:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-collapsed .tree .treeview {
+  position: relative;
 }
 
 .sidebar-collapsed .tree .treeview > a {
@@ -13120,7 +13135,20 @@ strong {
 }
 
 .sidebar-collapsed .tree .treeview .treeview-menu {
-  display: none !important;
+  display: none;
+  position: absolute;
+  left: 100%;
+  width: 12.5rem;
+  top: 0;
+  background-color: #000330;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.25rem;
+  margin-bottom: 0;
+  margin-left: 0.5rem;
+}
+
+.sidebar-collapsed .tree .treeview .treeview-menu li a {
+  padding-left: 1rem;
 }
 
 /*-- Site Header --*/

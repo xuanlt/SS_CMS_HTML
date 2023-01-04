@@ -21,13 +21,13 @@ jQuery(document).ready(function($) {
     }
 
     //Sidebar Toggle
-    $('.tree .treeview').click(function(e) {
+    $('.tree .treeview > a').click(function(e) {
         e.preventDefault();
         //Open
-        $(this).toggleClass('menu-opened active');
-        $(this).find('.treeview-menu').toggle();
+        $(this).parent().toggleClass('menu-opened active');
+        $(this).parent().find('.treeview-menu').toggle();
         //Close
-        $('.tree .treeview').not($(this)).removeClass('menu-opened active');
+        $('.tree .treeview > a').not($(this)).parent().removeClass('menu-opened active');
         $('.tree .treeview').not($(this)).find('.treeview-menu').hide();
     })
 

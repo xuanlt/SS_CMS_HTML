@@ -493,11 +493,6 @@ strong {
                     font-size: 1rem;
                 }
             }
-            li.active {
-                >a {
-                    color: rgba(255, 255, 255, 1);
-                }
-            }
             .treeview-menu {
                 margin: 0;
                 padding: 0;
@@ -518,11 +513,25 @@ strong {
                     .pull-right-container {
                         .pull-right {
                             transform: rotate(-90deg);
+                            opacity: 1;
                         }
                     }
                 }
                 >a {
                     color: rgba(255, 255, 255, 1);
+                }
+                .treeview-menu {
+                    display: block !important;
+                }
+            }
+        }
+        li.active {
+            >a {
+                color: rgba(255, 255, 255, 1);
+                background-color: rgba(255, 255, 255, 0.2);
+                &:hover {
+                    color: rgba(255, 255, 255, 1);
+                    background-color: rgba(255, 255, 255, 0.2);
                 }
             }
         }
@@ -544,8 +553,23 @@ strong {
                     display: none;
                 }
             }
+            position: relative;
             .treeview-menu {
-                display: none !important;
+                display: none;
+                position: absolute;
+                left: 100%;
+                width: 12.5rem;
+                top: 0;
+                background-color: #000330;
+                border-left: 1px solid rgba(255, 255, 255, 0.2);
+                padding: 0.25rem;
+                margin-bottom: 0;
+                margin-left: 0.5rem;
+                li {
+                    a {
+                        padding-left: 1rem;
+                    }
+                }
             }
         }
     }
