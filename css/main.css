@@ -13052,6 +13052,8 @@ strong {
           justify-content: center;
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
 }
 
 .site-sidebar .tree .treeview a > .fa {

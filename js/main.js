@@ -20,6 +20,17 @@ jQuery(document).ready(function($) {
         $('.btn-sidebar-toggle').click();
     }
 
+    //Sidebar Toggle
+    $('.tree .treeview').click(function(e) {
+        e.preventDefault();
+        //Open
+        $(this).toggleClass('menu-opened active');
+        $(this).find('.treeview-menu').toggle();
+        //Close
+        $('.tree .treeview').not($(this)).removeClass('menu-opened active');
+        $('.tree .treeview').not($(this)).find('.treeview-menu').hide();
+    })
+
     // Noticaiton
 
     //Setup Nicescroll
