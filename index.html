@@ -26,6 +26,7 @@
                 <!-- END Site Brand -->
                 <button class="btn btn-white btn-sidebar-toggle bg-transparent"><i class="fa-solid fa-bars"></i></button>
             </div>
+            <!-- BEGIN Sidebar Content -->
             <div class="sidebar-content p-2">
                 <!-- BEGIN Sidebar Menu -->
                 <ul id="sidebar-nav" class="nav sidebar-nav flex-column">
@@ -161,9 +162,11 @@
                 </ul>
                 <!-- END Sidebar Menu -->
                 <p>&nbsp;</p>
+                <hr class="my-3">
+                <div class="heading-group-title small text-uppercase opacity-50 my-2">Menu</div>
                 <!-- BEGIN Sidebar Menu Tree -->
                 <ul class="sidebar-menu tree" data-widget="tree">
-                    <li class="treeview menu-opened active"><a href="#"><i class="fa fa-list"></i>  <span>Giáo viên &amp; phụ huynh</span> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+                    <li class="treeview menu-opened active"><a href="#"><i class="fa fa-list"></i>  <span>Giáo viên &amp; phụ huynh</span> <span class="pull-right-container"><i class="fa fa-angle-right pull-right"></i></span></a>
                         <ul class="treeview-menu">
                             <li><a href="/student/checkin"><i class="fa fa-check"></i>  <span>Điểm danh</span></a></li>
                             <li class="active"><a href="/activate-class"><i class="fa fa-plus-square-o"></i>  <span>Hoạt động lớp học</span></a></li>
@@ -176,14 +179,14 @@
                             <li><a href="/student/add-multi"><i class="fa fa-plus"></i>  <span>Thêm học sinh</span></a></li>
                         </ul>
                     </li>
-                    <li class="treeview"><a href="#"><i class="fa fa-cart-plus"></i>  <span>Bán hàng</span> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
-                        <ul class="treeview-menu" style="display: none;">
+                    <li class="treeview"><a href="#"><i class="fa fa-cart-plus"></i>  <span>Bán hàng</span> <span class="pull-right-container"><i class="fa fa-angle-right pull-right"></i></span></a>
+                        <ul class="treeview-menu">
                             <li><a href="/order/index"><i class="fa fa-circle-o"></i>  <span>Quản lý đơn hàng</span></a></li>
                             <li><a href="/product/index"><i class="fa fa-circle-o"></i>  <span>Quản lý sản phẩm</span></a></li>
                         </ul>
                     </li>
-                    <li class="treeview"><a href="#"><i class="fa fa-gear"></i>  <span>Hệ thống</span> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
-                        <ul class="treeview-menu" style="display: none;">
+                    <li class="treeview"><a href="#"><i class="fa fa-gear"></i>  <span>Hệ thống</span> <span class="pull-right-container"><i class="fa fa-angle-right pull-right"></i></span></a>
+                        <ul class="treeview-menu">
                             <li><a href="/admin"><i class="fa fa-circle-o"></i>  <span>Danh sách tài khoản</span></a></li>
                             <li><a href="/user-role/index"><i class="fa fa-circle-o"></i>  <span>Quản lý Phân quyền</span></a></li>
                             <li><a href="/classroom"><i class="fa fa-circle-o"></i>  <span>Quản lý lớp</span></a></li>
@@ -195,6 +198,12 @@
                 </ul>
                 <!-- END Sidebar Menu Tree -->
             </div>
+            <!-- END Sidebar Content -->
+            <!-- BEGIN Sidebar Footer -->
+            <div class="sidebar-footer p-2">
+                <div class="small opacity-50">© Copyright 2022 by SS CMS</div>
+            </div>
+            <!-- END Sidebar Footer -->
         </div>
         <!-- END Site Sidebar -->
         <!-- BEGIN Site Header -->
@@ -232,7 +241,7 @@
                                     <a href="#" class="list-group-item list-group-item-action unread">
                                         <div class="d-flex">
                                             <div class="flex-shrink-1 me-3">
-                                                <img src="holder.js/40x40?random=yes" class="mt-1" alt="">
+                                                <img src="img/temp/40x40.jpg" class="mt-1" alt="">
                                             </div>
                                             <div class="flex-grow-1">
                                                 <p class="mb-1">Ut vel nibh sit amet dolor hendrerit vestibulum.</p>
@@ -245,7 +254,7 @@
                                     <a href="#" class="list-group-item list-group-item-action unread">
                                         <div class="d-flex">
                                             <div class="flex-shrink-1 me-3">
-                                                <img src="holder.js/40x40?random=yes" class="mt-1" alt="">
+                                                <img src="img/temp/40x40.jpg" class="mt-1" alt="">
                                             </div>
                                             <div class="flex-grow-1">
                                                 <p class="mb-1">Ut vel nibh sit amet dolor hendrerit vestibulum.</p>
@@ -258,7 +267,7 @@
                                     <a href="#" class="list-group-item list-group-item-action">
                                         <div class="d-flex">
                                             <div class="flex-shrink-1 me-3">
-                                                <img src="holder.js/40x40?random=yes" class="mt-1" alt="">
+                                                <img src="temp/40x40.jpg" class="mt-1" alt="">
                                             </div>
                                             <div class="flex-grow-1">
                                                 <p class="mb-1">Ut vel nibh sit amet dolor hendrerit vestibulum.</p>
@@ -275,11 +284,11 @@
                             </div>
                         </li>
                         <li class="nav-item item-user dropdown no-arrow ms-2">
-                            <a href="#" class="nav-link dropdown-toggle px-0" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"><img src="holder.js/32x32?random=yes&text=\n" class="rounded-circle" alt=""></a>
+                            <a href="#" class="nav-link dropdown-toggle px-0" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"><img src="img/temp/32x32.jpg" class="rounded-circle" alt=""></a>
                             <ul class="dropdown-menu dropdown-menu-end">
                                 <li class="py-2 px-3">
                                     <p class="text-center mb-1">
-                                        <a href="#"><img src="holder.js/64x64?random=yes&text=\n" class="rounded-circle" alt=""></a>
+                                        <a href="#"><img src="img/temp/64x64.jpg" class="rounded-circle" alt=""></a>
                                     </p>
                                     <p class="text-center mb-1"><strong>Mercedes Gilmore</strong></p>
                                 </li>
@@ -382,7 +391,6 @@
     <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/holderjs/holder.min.js"></script>
     <script src="js/jquery.nicescroll.min.js"></script>
     <script src="js/main.js"></script>
     <!-- END Inlucde JS -->
