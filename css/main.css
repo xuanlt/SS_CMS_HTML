@@ -12711,12 +12711,45 @@ strong {
   background-color: #EBF5FF;
 }
 
+.bg-dark-gradient {
+  background: #293a53;
+  background: -webkit-gradient(linear, left top, left bottom, from(#293a53), to(#172130));
+  background: linear-gradient(to bottom, #293a53 0%, #172130 100%);
+}
+
+.form-floating.w-icon .form-control {
+  padding-right: 2rem;
+}
+
+.form-floating.w-icon .btn-icon {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  line-height: 1.5rem;
+  margin-top: -0.75rem;
+  padding: 0 !important;
+  min-height: 1.5rem;
+  opacity: 0.5;
+}
+
+.form-floating.w-icon .btn-icon:active {
+  border-color: rgba(255, 255, 255, 0) !important;
+}
+
+.form-floating.w-icon .btn-icon:hover {
+  opacity: 1;
+}
+
 /*--- LAYOUT ---*/
 .site {
   position: relative;
   padding-left: 16rem;
   padding-top: 3.5rem;
   min-width: 20rem;
+}
+
+.site.full-height {
+  height: 100vh;
 }
 
 @media screen and (max-width: 540px) {

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- BEGIN Includes Styles  -->
+    <link rel="stylesheet" href="css/fa.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- END Include Styles  -->
+    <title>SS - Login</title>
+</head>
+
+<body class="page login">
+    <!-- BEGIN Site -->
+    <div class="site p-0 full-height bg-dark-gradient">
+        <div class="container h-100 d-flex flex-column justify-content-center">
+            <div class="py-5 mt-auto">
+                <div class="row justify-content-center">
+                    <div class="col-10 col-lg-4 col-sm-6">
+                        <p class="text-center my-4"><img src="img/logo-full.svg" alt=""></p>
+                        <div class="form-floating w-icon mb-3">
+                            <input type="text" class="form-control" id="username" placeholder="Tên đăng nhập hoặc email">
+                            <label for="username">Email của bạn</label>
+                            <button class="btn btn-icon"><i class="fa-solid fa-envelope icon"></i></button>
+                        </div>
+                        <div class="form-floating w-icon mb-3">
+                            <input type="password" class="form-control" id="passwords" placeholder="Mật khẩu">
+                            <label for="passwords">Nhập mật khẩu</label>
+                            <button class="btn btn-icon btn-pw-toggle"><i class="fa-solid fa-eye icon"></i></button>
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn btn-primary btn-lg w-100 text-white mb-2" onclick="location.href='index.html'">Đăng nhập</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="py-3 mt-auto">
+                <p class="text-center text-white mb-0">Cần giúp đỡ. <a href="#" class="text-decoration-underline" type="button" data-bs-target="#resetModal" data-bs-toggle="modal"><strong>Liên hệ ở đây</strong></a></p>
+            </div>
+        </div>
+    </div>
+    <!-- END Site-->
+    <!-- BEGIN Reset Modal -->
+    <div class="modal fade" id="resetModal" tabindex="-1" aria-labelledby="" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary-light">
+                    <button class="btn bg-transparent border-0"><i class="fa-solid fa-chevron-left"></i></button>
+                    <h4 class="text-primary text-center mb-0">Lấy lại mật khẩu</h4>
+                    <button class="btn bg-transparent hidden">&nbsp;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Xin vui lòng cung cấp thông tin dưới đây để xác nhận lấy lại mật khẩu của bạn.</p>
+                    <div class="mb-3">
+                        <label for="reset-email" class="text-secondary mb-1">Email đăng ký</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control border-end-0" placeholder="Địa chỉ email">
+                            <div class="input-group-text border-start-0"><i class="fa-regular fa-envelope icon opacity-50"></i></div>
+                        </div>
+                    </div>
+                    <button class=" btn btn-primary btn-lg w-100 text-white mb-2" data-bs-dismiss="modal">Gửi thông tin</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Login Reset -->
+
+    <script src="node_modules/@popperjs/core/dist/umd/popper.min.js "></script>
+    <!-- BEGIN Inlucde JS  -->
+    <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- END Inlucde JS -->
+    <!-- BEGIN Only for this page  -->
+    <style>
+        .form-floating {
+            color: #fff;
+        }
+        
+        .form-floating .btn-icon {
+            color: #fff;
+        }
+        
+        .form-floating .form-control {
+            background-color: rgba(255, 255, 255, 0.2) !important;
+            border: 0;
+            color: #fff;
+        }
+        
+        .form-floating .form-control:focus {
+            background-color: rgba(255, 255, 255, 0.3) !important;
+        }
+    </style>
+    <script>
+        jQuery(document).ready(function($) {
+
+        });
+    </script>
+    <!-- END Only for this page  -->
+
+</body>
+
+</html>
