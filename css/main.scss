@@ -3,6 +3,7 @@
 // scss-docs-start gray-color-variables
 $white: #fff !default;
 $black: #000 !default;
+$dark: #111 !default;
 // scss-docs-end gray-color-variables
 // scss-docs-start color-variables
 $blue: #007DFF !default;
@@ -16,10 +17,17 @@ $green: #198754 !default;
 $teal: #20c997 !default;
 $cyan: #0dcaf0 !default;
 // scss-docs-end color-variables
+// scss-docs-start theme-color-variables
+$primary: $blue !default;
+// scss-docs-end theme-color-variables
 // $font-size-base affects the font size of the body text
 $font-size-base: 0.875rem !default;
 // Settings for the `<body>` element.
 $body-bg: #eee !default;
+// Links
+//
+// Style anchor elements.
+$link-decoration: none !default;
 // scss-docs-start dropdown-variables
 $dropdown-min-width: 10rem !default;
 // scss-docs-end dropdown-variables
@@ -30,6 +38,25 @@ $input-group-addon-bg: $white !default;
 $input-bg: $white !default;
 $input-focus-box-shadow: none !default;
 // scss-docs-end form-input-variables
+// scss-docs-start card-variables
+$card-border-color: rgba(0, 0, 0, 0) !default;
+$card-cap-bg: rgba($primary, .05) !default;
+// scss-docs-end card-variables
+// scss-docs-start table-variables
+$table-hover-bg-factor: .05 !default;
+$table-hover-bg: rgba($primary, $table-hover-bg-factor) !default;
+$table-striped-bg-factor: .02 !default;
+$table-striped-bg: rgba($dark, $table-striped-bg-factor) !default;
+$table-active-bg-factor: .1 !default;
+$table-active-bg: rgba($primary, $table-active-bg-factor) !default;
+// scss-docs-end table-variables
+// Badges
+// scss-docs-start badge-variables
+$badge-font-weight: normal !default;
+$badge-padding-y: .5em !default;
+$badge-padding-x: .75em !default;
+$badge-border-radius: 1.5rem !default;
+// scss-docs-end badge-variables
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 /* inter-regular - vietnamese_latin */
@@ -216,6 +243,69 @@ strong {
             }
             &:hover {
                 opacity: 1;
+            }
+        }
+    }
+}
+
+
+/* Button */
+
+.btn {
+    &.btn-none {
+        background-color: rgba(255, 255, 255, 0);
+        border: 0;
+        opacity: 0.75;
+        &:hover {
+            background-color: rgba(0, 0, 0, 0);
+            opacity: 1;
+        }
+        &:focus {
+            border: 0;
+        }
+    }
+}
+
+
+/* Table */
+
+.table {
+    thead,
+    tfoot {
+        tr {
+            th {
+                text-transform: uppercase;
+                color: rgba(0, 0, 0, 0.5);
+                font-size: 0.75rem;
+                .form-check {
+                    font-size: 0.875rem;
+                }
+            }
+        }
+    }
+    &.table-list {
+        tr {
+            th:first-child,
+            td:first-child {
+                padding-left: 1rem;
+            }
+            th:last-child,
+            td:last-child {
+                padding-right: 1rem;
+            }
+        }
+    }
+    &.table-striped {
+        tbody {
+            tr {
+                td {
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+                }
+            }
+            tr:last-child {
+                td {
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                }
             }
         }
     }

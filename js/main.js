@@ -8,8 +8,6 @@ jQuery(document).ready(function($) {
         let sidebar_header_height = $('.site-sidebar .sidebar-header').outerHeight();
         let sidebar_footer_height = $('.site-sidebar .sidebar-footer').outerHeight();
 
-        console.log(sidebar_footer_height);
-
         $('.site-sidebar .sidebar-content').css('height', window_height - sidebar_header_height - sidebar_footer_height + 'px');
         submenu_sidebar_collapsed();
     }
