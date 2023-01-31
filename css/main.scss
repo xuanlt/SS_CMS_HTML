@@ -43,8 +43,8 @@ $card-border-color: rgba(0, 0, 0, 0) !default;
 $card-cap-bg: rgba($primary, .05) !default;
 // scss-docs-end card-variables
 // scss-docs-start table-variables
-$table-hover-bg-factor: .05 !default;
-$table-hover-bg: rgba($primary, $table-hover-bg-factor) !default;
+$table-hover-bg-factor: .04 !default;
+$table-hover-bg: rgba($dark, $table-hover-bg-factor) !default;
 $table-striped-bg-factor: .02 !default;
 $table-striped-bg: rgba($dark, $table-striped-bg-factor) !default;
 $table-active-bg-factor: .1 !default;
@@ -148,8 +148,15 @@ strong {
     }
 }
 
+.link {
+    text-decoration: underline;
+}
+
+
+/* Dropdown Menu */
+
 .dropdown-menu {
-    transform: translate(0px, 100px);
+    transform: translate(0px, 64px);
     opacity: 0.5;
     transition: all ease 0.3s;
     &.show {
@@ -164,6 +171,17 @@ strong {
         }
     }
 }
+
+.card {
+    .card-header {
+        .dropdown-menu {
+            transform: translate(0px, 48px);
+        }
+    }
+}
+
+
+/* Input Group */
 
 .input-group {
     &.rounded-circle {
@@ -264,6 +282,33 @@ strong {
             border: 0;
         }
     }
+    &.btn-primary {
+        color: #fff;
+        &:focus {
+            color: #fff;
+        }
+    }
+    &.btn-outline-primary {
+        &:hover {
+            color: #fff;
+        }
+    }
+    &.btn-arrow-toggle {
+        .icon {
+            font-family: "Font Awesome 6 Pro";
+            font-weight: 900;
+            &:before {
+                content: "\f0d7";
+            }
+        }
+        &[aria-expanded="true"] {
+            .icon {
+                &:before {
+                    content: "\f0de";
+                }
+            }
+        }
+    }
 }
 
 
@@ -307,6 +352,70 @@ strong {
                     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
                 }
             }
+        }
+    }
+}
+
+
+/* Nav List */
+
+.nav-list {
+    .nav-item {
+        padding: 0 0.75rem;
+        margin: 0;
+        line-height: 1.2;
+        font-weight: bold;
+        position: relative;
+        &:after {
+            content: '';
+            width: 1px;
+            height: 1rem;
+            background-color: rgba(0, 0, 0, 0.2);
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -0.5rem;
+        }
+        .nav-link {
+            padding: 0.125rem 0;
+            color: rgba(0, 0, 0, 0.5);
+            .badge {
+                padding-top: 0.125rem;
+                padding-bottom: 0.125rem;
+            }
+            &.active {
+                color: rgba(0, 0, 0, 1);
+            }
+        }
+        &:first-child {
+            padding-left: 0;
+        }
+        &:last-child {
+            padding-right: 0;
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
+
+
+/* List Icon */
+
+.list-icons {
+    li {
+        position: relative;
+        padding-left: 1.5rem;
+        line-height: 1.5rem;
+        .icon {
+            width: 1rem;
+            height: 1rem;
+            opacity: 0.75;
+            display: inline-block;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            top: 0.25rem;
         }
     }
 }
