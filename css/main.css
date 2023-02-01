@@ -12639,6 +12639,35 @@ strong {
   text-decoration: underline;
 }
 
+/* Title */
+.c-title {
+  position: relative;
+  line-height: 1;
+  padding-left: 0.75rem;
+  border-left: 0.25rem solid #007DFF;
+}
+
+/* Nav */
+.nav-w-tabs {
+  border-bottom: 0;
+}
+
+.nav-w-tabs .nav-item .nav-link {
+  border-bottom: 0;
+  color: #000;
+  border-top-width: 2px;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.nav-w-tabs .nav-item .nav-link.active {
+  background-color: #fff;
+  color: #007DFF;
+  border-top-color: #007DFF;
+}
+
 /* Dropdown Menu */
 .dropdown-menu {
   -webkit-transform: translate(0px, 64px);

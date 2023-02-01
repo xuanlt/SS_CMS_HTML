@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- BEGIN Includes Styles  -->
     <script src="includes/styles.js"></script>
+    <link rel="stylesheet" href="node_modules/jquery-datetimepicker/jquery.datetimepicker.css">
     <link rel="stylesheet" href="css/main.css">
     <!-- END Include Styles  -->
     <title>SS - New</title>
@@ -30,7 +31,79 @@
                         <div class="mb-3">
                             <input type="text" class="form-control form-control-lg" value="" placeholder="Tiêu đề bài viết">
                         </div>
-                        <textarea id="tiny"></textarea>
+                        <div class="mb-3">
+                            <textarea class="mb-3" id="tiny"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <ul class="nav nav-tabs nav-w-tabs mb-0" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Thông tin thêm</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Khác</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content p-3 bg-white border border-radius-bottom">
+                                <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                                    <h6 class="c-title mb-2 text-primary text-uppercase">Đây là tiêu đề</h6>
+                                    <div class="row align-items-center mb-3">
+                                        <div class="col-lg-3 col-md-4">
+                                            <label class="mb-1 mb-md-0">Lựa chọn</label>
+                                        </div>
+                                        <div class="col-lg-9 col-md-8">
+                                            <select class="form-select">
+                                                <option value="0">Lựa chọn thứ nhất</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-center mb-3">
+                                        <div class="col-lg-3 col-md-4">
+                                            <label class="mb-1 mb-md-0">Tiêu đề</label>
+                                        </div>
+                                        <div class="col-lg-9 col-md-8">
+                                            <input type="text" class="form-control" value="" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-center mb-3">
+                                        <div class="col-lg-3 col-md-4">
+                                            <label class="mb-1 mb-md-0">Mật khẩu</label>
+                                        </div>
+                                        <div class="col-lg-9 col-md-8">
+                                            <div class="input-group input-group-fake-input">
+                                                <input type="password" class="form-control border-end-0" value="" placeholder="">
+                                                <span class="input-group-text bg-transparent border-start-0"><i class="fa-solid fa-lock opacity-50"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-center mb-3">
+                                        <div class="col-lg-3 col-md-4">
+                                            <label class="mb-1 mb-md-0">Email</label>
+                                        </div>
+                                        <div class="col-lg-9 col-md-8">
+                                            <div class="input-group input-group-fake-input">
+                                                <input type="text" class="form-control border-end-0" value="" placeholder="">
+                                                <span class="input-group-text bg-transparent border-start-0"><i class="fa-solid fa-envelope opacity-50"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-center mb-3">
+                                        <div class="col-lg-3 col-md-4">
+                                            <label class="mb-1 mb-md-0">Lựa chọn ngày tháng</label>
+                                        </div>
+                                        <div class="col-lg-9 col-md-8">
+                                            <div class="input-group input-group-fake-input">
+                                                <input type="text" class="form-control border-end-0 date-picker" value="" placeholder="">
+                                                <span class="input-group-text bg-transparent border-start-0"><i class="fa-solid fa-calendar opacity-50"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-end">
+                                        <button class="btn btn-primary">Lưu thông tin</button>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">Đang cập nhật</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-lg-3 col-md-4">
                         <!-- BEGIN Card Publish -->
@@ -124,6 +197,7 @@
     <!-- BEGIN Inlucde JS  -->
     <script src="includes/plugins.js"></script>
     <script src="node_modules/tinymce/tinymce.min.js"></script>
+    <script src="node_modules/jquery-datetimepicker/jquery.datetimepicker.js"></script>
     <script src="js/main.js"></script>
     <!-- END Inlucde JS -->
     <!-- BEGIN Only for this page  -->
@@ -136,7 +210,24 @@
     </script>
     <script>
         jQuery(document).ready(function($) {
-
+            jQuery.datetimepicker.setLocale('vi');
+            jQuery('.date-picker').datetimepicker({
+                i18n: {
+                    vi: {
+                        months: [
+                            'Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4',
+                            'Tháng 5', 'Tháng 6', 'Tháng 7', 'Tháng 8',
+                            'Tháng 9', 'Tháng 10', 'Tháng 11', 'Tháng 12',
+                        ],
+                        dayOfWeek: [
+                            "Chủ nhật", "Thứ 2", "Thứ 3", "Thứ 4",
+                            "Thứ 5", "Thứ 6", "Thứ 7",
+                        ]
+                    }
+                },
+                timepicker: false,
+                format: 'd.m.Y'
+            });
         });
     </script>
     <!-- END Only for this page  -->
